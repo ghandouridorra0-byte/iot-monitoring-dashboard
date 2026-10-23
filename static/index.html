@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Sensor Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div>
+            <h1>IoT Monitor</h1>
+            <p>Sensor Monitoring Dashboard</p>
+        </div>
+        <span class="status">
+            <span class="dot"></span>
+            System Online
+        </span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">OVERVIEW</p>
+                <h2>Welcome to your dashboard</h2>
+                <p>Monitor your environmental sensor data in real time.</p>
+            </div>
+            <div class="sensor-icon">⌁</div>
+        </section>
+
+        <section class="cards">
+            <article class="card">
+                <p class="card-label">Temperature</p>
+                <div class="value">
+                    <span id="temperature">--</span>
+                    <span class="unit">°C</span>
+                </div>
+                <p class="description">Current temperature</p>
+            </article>
+
+            <article class="card">
+                <p class="card-label">Humidity</p>
+                <div class="value">
+                    <span id="humidity">--</span>
+                    <span class="unit">%</span>
+                </div>
+                <p class="description">Relative humidity</p>
+            </article>
+
+            <article class="card">
+                <p class="card-label">Connection</p>
+                <div class="value connection">Online</div>
+                <p class="description">Backend API status</p>
+            </article>
+        </section>
+        
+        <section class="details">
+            <h3>Sensor History</h3>
+            <p>Temperature and humidity readings</p>
+
+            <div class="chart-container">
+                <canvas id="sensorChart"></canvas>
+            </div>
+            
+            <div id="alerts" class="alerts">
+                No alerts. All values are within the configured limits.
+            </div>
+
+    <p>Last update: <span id="timestamp">Waiting for data...</span></p>
+    <p id="message">Connecting to sensor API...</p>
+</section>
+
+       
+        <footer>
+            IoT Sensor Monitoring Dashboard · Student Project
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
