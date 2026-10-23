@@ -64,5 +64,5 @@ Open the dashboard at: http://127.0.0.1:8090/
 
 \- `/docs` — API documentation
 
-
+lien de simulation wokwi:https://wokwi.com/projects/478702709025485825
 
